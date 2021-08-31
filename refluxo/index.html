@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Refluxo — Yiftah Peled</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="./scripts/jspdf.umd.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="./scripts/refluxoGen.js"></script>
+	<script src="./scripts/NotoSans-Regular-normal.js" type="module"></script>
+	<script src="./scripts/NotoSans-Bold-bold.js" type="module"></script>
+
+
+	<style>
+
+		
+
+	</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+	<div id="container">
+		<div id="header">
+		<img src="refluxo.svg"/ alt="Refluxo">
+		<h2>Yiftah Peled</h2>
+		</div>
+		<div id="content">
+		<form>
+				<label>Nome completo</label><br>
+				<input type="text" id="nome" placeholder=""/><br>
+				<label>Texto</label><br>
+				<textarea id="texto" placeholder="Invente uma história que julgue interessante, de 3 a 6 linhas, sobre cada objeto fotografado. Imagine algo sobre suas “biografias”, percursos ou origens. Você pode criar relações entre os objetos e pessoas ou suas próprias experiências." maxlength="500"></textarea>
+		</form>
+		</div>
+
+		<div id="botoes">
+			<div id="botao">
+				<button id="submit">Gerar PDF</button>
+			</div>
+			<div>
+				<a href="#proposicao"><button>Ler a proposição</button></a>
+			</div>
+		</div>
+	</div>
+	</div>
+
+<div id = "proposicao">
+		<div class="separador"></div>
+		<h2>Proposição</h2>
+		<p>1. Vá até a praia (ou alguma área urbana) e fotografe três objetos ou fragmentos de pequenos objetos artificiais encontrados na areia. Por exemplo, palitos de picolé, brinquedos, pedaços de objetos plásticos ou qualquer outro objeto pequeno. É importante que sejam artificiais, produzidos e descartados por seres humanos.</p>
+
+		<p>2. A seguir, invente uma história que julgue interessante, de 3 a 6 linhas, sobre cada objeto. Imagine algo sobre suas “biografias”, percursos ou origens. Você pode criar relações entre os objetos e pessoas ou suas próprias experiências.</p>
+
+		<p>3. Preencha seu nome e sua história e, após gerar o arquivo PDF, envie-o como anexo para o e-mail <a href="mailto:ossonhosdequem@gmail.com">ossonhosdequem@gmail.com</a>.</p>
+	</div>
+	
+	
+	<!-- <div id="footer">Refluxo é parte da exposição "Os sonhos de quem estamos sonhando?, de Yiftah Peled"</div> -->
+
+	<script>
+		$('#submit').on('click', pdfGen);
+	</script>
+	
+</body>
+</html>
