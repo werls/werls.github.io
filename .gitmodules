@@ -1,0 +1,3 @@
+[submodule "anuencia-gen"]
+	path = anuencia-gen
+	url = https://github.com/werls/anuencia-gen.git
